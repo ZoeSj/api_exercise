@@ -174,7 +174,7 @@ Https://api.zoe.com/
 - 服务器通过access_token，向第三方服务器申请用户数据，完成登陆流程，
 
 	1.	APP_SECRET 存储在客户端，客户端获取授权码之后，直接通过授权码和 APP_SECRET 去第三方换取 access_token。
-	2.	APP_SECRET 存储在服务端，客户端获取授权码之后，将授权码发送给服务器，服务器通过授权码和 APP_SECRET 去第三方换取 access_token。（推荐）
+	2.	APP_SECRET 存储在服务端，客户端获取授权码之后，将授权码发送给服务器，服务器通过授权码和 APP_SECRET 去第三方换取 access_token（推荐）
 
 * API 请求如何保证数据不被篡改？
 * JSON 和 JSONP 的区别
