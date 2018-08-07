@@ -185,3 +185,24 @@ Https://api.zoe.com/
 * OAuth 2 主要用在哪些场景下
 * JWT
 * PHP 中 `json_encode(['key'=>123]);` 与 `return json_encode([]);` 区别，会产生什么问题？如何解决
+
+### 解决冲突
+
+** 遇到冲突 **；
+
+- 先解决冲突
+冲突不一定是一个，有可能一个文件里面有多个冲突，解决一个之后要搜索`<<<<<<`看是否还有其他冲突。
+- 解决完冲突之后，要gss一下，查看当前项目的状态（解决冲突的文件前面有UU），不要一下子`git add .`，有可能其他文件不是想要提交的。gss之后，提交（git add）想要修改的文件（解决冲突的文件），git add 之后再gss，查看当前状态，没有问题再commit和push。
+
+
+** 当遇到提交了不想提交的代码到远程之后，如何解决？**
+
+- git reset（不推荐）
+当提交了A B C D E次commit之后，发现B提交的代码里面有不想提交的，怎么般？如果C D Ecommit的内容被强删没有影响，可以使用git reset 到B，然后对远程的代码进行`git push -f origin master`,这时候CDE提交的记录历史以及内容都没了。想找也找不回来了
+
+
+- git revert (推荐)
+当提交了A B C D E次commit之后，发现B提交的代码里面有不想提交的，可以`git revert`到B，先gss查看下状态，不想提交的，`git checkout `确定没问题之后再提交
+
+### 当comiit了不想commit的修改时，怎么办？移出暂存区
+`git rm --cached wechat_login.md `
