@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.5.40 on 2018-08-18 18:18:34.
+ * Generated for Laravel 5.5.40 on 2018-08-21 10:48:07.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -13626,6 +13626,724 @@ namespace Mews\Purifier\Facades {
  
 }
 
+namespace Overtrue\LaravelWeChat { 
+
+    class Facade {
+        
+        /**
+         * 
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getId()
+        {
+            //Method inherited from \EasyWeChat\Kernel\ServiceContainer            
+            return \EasyWeChat\OfficialAccount\Application::getId();
+        }
+        
+        /**
+         * 
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getConfig()
+        {
+            //Method inherited from \EasyWeChat\Kernel\ServiceContainer            
+            return \EasyWeChat\OfficialAccount\Application::getConfig();
+        }
+        
+        /**
+         * Return all providers.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getProviders()
+        {
+            //Method inherited from \EasyWeChat\Kernel\ServiceContainer            
+            return \EasyWeChat\OfficialAccount\Application::getProviders();
+        }
+        
+        /**
+         * 
+         *
+         * @param array $providers
+         * @static 
+         */ 
+        public static function registerProviders($providers)
+        {
+            //Method inherited from \EasyWeChat\Kernel\ServiceContainer            
+            return \EasyWeChat\OfficialAccount\Application::registerProviders($providers);
+        }
+        
+        /**
+         * Sets a parameter or an object.
+         * 
+         * Objects must be defined as Closures.
+         * 
+         * Allowing any PHP callable leads to difficult to debug problems
+         * as function names (strings) are callable (creating a function with
+         * the same name as an existing parameter would break your container).
+         *
+         * @param string $id The unique identifier for the parameter or object
+         * @param mixed $value The value of the parameter or a closure to define an object
+         * @throws FrozenServiceException Prevent override of a frozen service
+         * @static 
+         */ 
+        public static function offsetSet($id, $value)
+        {
+            //Method inherited from \Pimple\Container            
+            return \EasyWeChat\OfficialAccount\Application::offsetSet($id, $value);
+        }
+        
+        /**
+         * Gets a parameter or an object.
+         *
+         * @param string $id The unique identifier for the parameter or object
+         * @return mixed The value of the parameter or an object
+         * @throws UnknownIdentifierException If the identifier is not defined
+         * @static 
+         */ 
+        public static function offsetGet($id)
+        {
+            //Method inherited from \Pimple\Container            
+            return \EasyWeChat\OfficialAccount\Application::offsetGet($id);
+        }
+        
+        /**
+         * Checks if a parameter or an object is set.
+         *
+         * @param string $id The unique identifier for the parameter or object
+         * @return bool 
+         * @static 
+         */ 
+        public static function offsetExists($id)
+        {
+            //Method inherited from \Pimple\Container            
+            return \EasyWeChat\OfficialAccount\Application::offsetExists($id);
+        }
+        
+        /**
+         * Unsets a parameter or an object.
+         *
+         * @param string $id The unique identifier for the parameter or object
+         * @static 
+         */ 
+        public static function offsetUnset($id)
+        {
+            //Method inherited from \Pimple\Container            
+            return \EasyWeChat\OfficialAccount\Application::offsetUnset($id);
+        }
+        
+        /**
+         * Marks a callable as being a factory service.
+         *
+         * @param callable $callable A service definition to be used as a factory
+         * @return callable The passed callable
+         * @throws ExpectedInvokableException Service definition has to be a closure or an invokable object
+         * @static 
+         */ 
+        public static function factory($callable)
+        {
+            //Method inherited from \Pimple\Container            
+            return \EasyWeChat\OfficialAccount\Application::factory($callable);
+        }
+        
+        /**
+         * Protects a callable from being interpreted as a service.
+         * 
+         * This is useful when you want to store a callable as a parameter.
+         *
+         * @param callable $callable A callable to protect from being evaluated
+         * @return callable The passed callable
+         * @throws ExpectedInvokableException Service definition has to be a closure or an invokable object
+         * @static 
+         */ 
+        public static function protect($callable)
+        {
+            //Method inherited from \Pimple\Container            
+            return \EasyWeChat\OfficialAccount\Application::protect($callable);
+        }
+        
+        /**
+         * Gets a parameter or the closure defining an object.
+         *
+         * @param string $id The unique identifier for the parameter or object
+         * @return mixed The value of the parameter or the closure defining an object
+         * @throws UnknownIdentifierException If the identifier is not defined
+         * @static 
+         */ 
+        public static function raw($id)
+        {
+            //Method inherited from \Pimple\Container            
+            return \EasyWeChat\OfficialAccount\Application::raw($id);
+        }
+        
+        /**
+         * Extends an object definition.
+         * 
+         * Useful when you want to extend an existing object definition,
+         * without necessarily loading that object.
+         *
+         * @param string $id The unique identifier for the object
+         * @param callable $callable A service definition to extend the original
+         * @return callable The wrapped callable
+         * @throws UnknownIdentifierException        If the identifier is not defined
+         * @throws FrozenServiceException            If the service is frozen
+         * @throws InvalidServiceIdentifierException If the identifier belongs to a parameter
+         * @throws ExpectedInvokableException        If the extension callable is not a closure or an invokable object
+         * @static 
+         */ 
+        public static function extend($id, $callable)
+        {
+            //Method inherited from \Pimple\Container            
+            return \EasyWeChat\OfficialAccount\Application::extend($id, $callable);
+        }
+        
+        /**
+         * Returns all defined value names.
+         *
+         * @return array An array of value names
+         * @static 
+         */ 
+        public static function keys()
+        {
+            //Method inherited from \Pimple\Container            
+            return \EasyWeChat\OfficialAccount\Application::keys();
+        }
+        
+        /**
+         * Registers a service provider.
+         *
+         * @param \Pimple\ServiceProviderInterface $provider A ServiceProviderInterface instance
+         * @param array $values An array of values that customizes the provider
+         * @return static 
+         * @static 
+         */ 
+        public static function register($provider, $values = array())
+        {
+            //Method inherited from \Pimple\Container            
+            return \EasyWeChat\OfficialAccount\Application::register($provider, $values);
+        }
+         
+    }
+ 
+}
+
+namespace Tymon\JWTAuth\Facades { 
+
+    class JWTAuth {
+        
+        /**
+         * Attempt to authenticate the user and return the token.
+         *
+         * @param array $credentials
+         * @return false|string 
+         * @static 
+         */ 
+        public static function attempt($credentials)
+        {
+            return \Tymon\JWTAuth\JWTAuth::attempt($credentials);
+        }
+        
+        /**
+         * Authenticate a user via a token.
+         *
+         * @return \Tymon\JWTAuth\Contracts\JWTSubject|false 
+         * @static 
+         */ 
+        public static function authenticate()
+        {
+            return \Tymon\JWTAuth\JWTAuth::authenticate();
+        }
+        
+        /**
+         * Alias for authenticate().
+         *
+         * @return \Tymon\JWTAuth\Contracts\JWTSubject|false 
+         * @static 
+         */ 
+        public static function toUser()
+        {
+            return \Tymon\JWTAuth\JWTAuth::toUser();
+        }
+        
+        /**
+         * Get the authenticated user.
+         *
+         * @return \Tymon\JWTAuth\Contracts\JWTSubject 
+         * @static 
+         */ 
+        public static function user()
+        {
+            return \Tymon\JWTAuth\JWTAuth::user();
+        }
+        
+        /**
+         * Generate a token for a given subject.
+         *
+         * @param \Tymon\JWTAuth\Contracts\JWTSubject $subject
+         * @return string 
+         * @static 
+         */ 
+        public static function fromSubject($subject)
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::fromSubject($subject);
+        }
+        
+        /**
+         * Alias to generate a token for a given user.
+         *
+         * @param \Tymon\JWTAuth\Contracts\JWTSubject $user
+         * @return string 
+         * @static 
+         */ 
+        public static function fromUser($user)
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::fromUser($user);
+        }
+        
+        /**
+         * Refresh an expired token.
+         *
+         * @param bool $forceForever
+         * @param bool $resetClaims
+         * @return string 
+         * @static 
+         */ 
+        public static function refresh($forceForever = false, $resetClaims = false)
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::refresh($forceForever, $resetClaims);
+        }
+        
+        /**
+         * Invalidate a token (add it to the blacklist).
+         *
+         * @param bool $forceForever
+         * @return $this 
+         * @static 
+         */ 
+        public static function invalidate($forceForever = false)
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::invalidate($forceForever);
+        }
+        
+        /**
+         * Alias to get the payload, and as a result checks that
+         * the token is valid i.e. not expired or blacklisted.
+         *
+         * @throws \Tymon\JWTAuth\Exceptions\JWTException
+         * @return \Tymon\JWTAuth\Payload 
+         * @static 
+         */ 
+        public static function checkOrFail()
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::checkOrFail();
+        }
+        
+        /**
+         * Check that the token is valid.
+         *
+         * @param bool $getPayload
+         * @return \Tymon\JWTAuth\Payload|bool 
+         * @static 
+         */ 
+        public static function check($getPayload = false)
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::check($getPayload);
+        }
+        
+        /**
+         * Get the token.
+         *
+         * @return \Tymon\JWTAuth\Token|null 
+         * @static 
+         */ 
+        public static function getToken()
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::getToken();
+        }
+        
+        /**
+         * Parse the token from the request.
+         *
+         * @throws \Tymon\JWTAuth\Exceptions\JWTException
+         * @return $this 
+         * @static 
+         */ 
+        public static function parseToken()
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::parseToken();
+        }
+        
+        /**
+         * Get the raw Payload instance.
+         *
+         * @return \Tymon\JWTAuth\Payload 
+         * @static 
+         */ 
+        public static function getPayload()
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::getPayload();
+        }
+        
+        /**
+         * Alias for getPayload().
+         *
+         * @return \Tymon\JWTAuth\Payload 
+         * @static 
+         */ 
+        public static function payload()
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::payload();
+        }
+        
+        /**
+         * Convenience method to get a claim value.
+         *
+         * @param string $claim
+         * @return mixed 
+         * @static 
+         */ 
+        public static function getClaim($claim)
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::getClaim($claim);
+        }
+        
+        /**
+         * Create a Payload instance.
+         *
+         * @param \Tymon\JWTAuth\Contracts\JWTSubject $subject
+         * @return \Tymon\JWTAuth\Payload 
+         * @static 
+         */ 
+        public static function makePayload($subject)
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::makePayload($subject);
+        }
+        
+        /**
+         * Check if the subject model matches the one saved in the token.
+         *
+         * @param string|object $model
+         * @return bool 
+         * @static 
+         */ 
+        public static function checkSubjectModel($model)
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::checkSubjectModel($model);
+        }
+        
+        /**
+         * Set the token.
+         *
+         * @param \Tymon\JWTAuth\Token|string $token
+         * @return $this 
+         * @static 
+         */ 
+        public static function setToken($token)
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::setToken($token);
+        }
+        
+        /**
+         * Unset the current token.
+         *
+         * @return $this 
+         * @static 
+         */ 
+        public static function unsetToken()
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::unsetToken();
+        }
+        
+        /**
+         * Set the request instance.
+         *
+         * @param \Illuminate\Http\Request $request
+         * @return $this 
+         * @static 
+         */ 
+        public static function setRequest($request)
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::setRequest($request);
+        }
+        
+        /**
+         * Set whether the subject should be "locked".
+         *
+         * @param bool $lock
+         * @return $this 
+         * @static 
+         */ 
+        public static function lockSubject($lock)
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::lockSubject($lock);
+        }
+        
+        /**
+         * Get the Manager instance.
+         *
+         * @return \Tymon\JWTAuth\Manager 
+         * @static 
+         */ 
+        public static function manager()
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::manager();
+        }
+        
+        /**
+         * Get the Parser instance.
+         *
+         * @return \Tymon\JWTAuth\Http\Parser\Parser 
+         * @static 
+         */ 
+        public static function parser()
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::parser();
+        }
+        
+        /**
+         * Get the Payload Factory.
+         *
+         * @return \Tymon\JWTAuth\Factory 
+         * @static 
+         */ 
+        public static function factory()
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::factory();
+        }
+        
+        /**
+         * Get the Blacklist.
+         *
+         * @return \Tymon\JWTAuth\Blacklist 
+         * @static 
+         */ 
+        public static function blacklist()
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::blacklist();
+        }
+        
+        /**
+         * Set the custom claims.
+         *
+         * @param array $customClaims
+         * @return $this 
+         * @static 
+         */ 
+        public static function customClaims($customClaims)
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::customClaims($customClaims);
+        }
+        
+        /**
+         * Alias to set the custom claims.
+         *
+         * @param array $customClaims
+         * @return $this 
+         * @static 
+         */ 
+        public static function claims($customClaims)
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::claims($customClaims);
+        }
+        
+        /**
+         * Get the custom claims.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getCustomClaims()
+        {
+            //Method inherited from \Tymon\JWTAuth\JWT            
+            return \Tymon\JWTAuth\JWTAuth::getCustomClaims();
+        }
+         
+    }
+
+    class JWTFactory {
+        
+        /**
+         * Create the Payload instance.
+         *
+         * @param bool $resetClaims
+         * @return \Tymon\JWTAuth\Payload 
+         * @static 
+         */ 
+        public static function make($resetClaims = false)
+        {
+            return \Tymon\JWTAuth\Factory::make($resetClaims);
+        }
+        
+        /**
+         * Empty the claims collection.
+         *
+         * @return $this 
+         * @static 
+         */ 
+        public static function emptyClaims()
+        {
+            return \Tymon\JWTAuth\Factory::emptyClaims();
+        }
+        
+        /**
+         * Build and get the Claims Collection.
+         *
+         * @return \Tymon\JWTAuth\Claims\Collection 
+         * @static 
+         */ 
+        public static function buildClaimsCollection()
+        {
+            return \Tymon\JWTAuth\Factory::buildClaimsCollection();
+        }
+        
+        /**
+         * Get a Payload instance with a claims collection.
+         *
+         * @param \Tymon\JWTAuth\Claims\Collection $claims
+         * @return \Tymon\JWTAuth\Payload 
+         * @static 
+         */ 
+        public static function withClaims($claims)
+        {
+            return \Tymon\JWTAuth\Factory::withClaims($claims);
+        }
+        
+        /**
+         * Set the default claims to be added to the Payload.
+         *
+         * @param array $claims
+         * @return $this 
+         * @static 
+         */ 
+        public static function setDefaultClaims($claims)
+        {
+            return \Tymon\JWTAuth\Factory::setDefaultClaims($claims);
+        }
+        
+        /**
+         * Helper to set the ttl.
+         *
+         * @param int $ttl
+         * @return $this 
+         * @static 
+         */ 
+        public static function setTTL($ttl)
+        {
+            return \Tymon\JWTAuth\Factory::setTTL($ttl);
+        }
+        
+        /**
+         * Helper to get the ttl.
+         *
+         * @return int 
+         * @static 
+         */ 
+        public static function getTTL()
+        {
+            return \Tymon\JWTAuth\Factory::getTTL();
+        }
+        
+        /**
+         * Get the default claims.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getDefaultClaims()
+        {
+            return \Tymon\JWTAuth\Factory::getDefaultClaims();
+        }
+        
+        /**
+         * Get the PayloadValidator instance.
+         *
+         * @return \Tymon\JWTAuth\Validators\PayloadValidator 
+         * @static 
+         */ 
+        public static function validator()
+        {
+            return \Tymon\JWTAuth\Factory::validator();
+        }
+        
+        /**
+         * Set the custom claims.
+         *
+         * @param array $customClaims
+         * @return $this 
+         * @static 
+         */ 
+        public static function customClaims($customClaims)
+        {
+            return \Tymon\JWTAuth\Factory::customClaims($customClaims);
+        }
+        
+        /**
+         * Alias to set the custom claims.
+         *
+         * @param array $customClaims
+         * @return $this 
+         * @static 
+         */ 
+        public static function claims($customClaims)
+        {
+            return \Tymon\JWTAuth\Factory::claims($customClaims);
+        }
+        
+        /**
+         * Get the custom claims.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getCustomClaims()
+        {
+            return \Tymon\JWTAuth\Factory::getCustomClaims();
+        }
+        
+        /**
+         * Set the refresh flow flag.
+         *
+         * @param bool $refreshFlow
+         * @return $this 
+         * @static 
+         */ 
+        public static function setRefreshFlow($refreshFlow = true)
+        {
+            return \Tymon\JWTAuth\Factory::setRefreshFlow($refreshFlow);
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -15782,6 +16500,12 @@ namespace  {
     class Captcha extends \Mews\Captcha\Facades\Captcha {}
 
     class Purifier extends \Mews\Purifier\Facades\Purifier {}
+
+    class EasyWeChat extends \Overtrue\LaravelWeChat\Facade {}
+
+    class JWTAuth extends \Tymon\JWTAuth\Facades\JWTAuth {}
+
+    class JWTFactory extends \Tymon\JWTAuth\Facades\JWTFactory {}
  
 }
 

@@ -15,6 +15,8 @@ $api->version('v1', [
     'namespace' => 'App\Http\Controllers\Api'
 ], function ($api) {
     $api->group([
+        'prefix' => 'api',
+        'grouptitle' => '用户中心',
         'middleware' => 'api.throttle',
         'limit' => config('api.rate_limits.sign.limit'),
         'expires' => config('api.rate_limits.sign.expires'),
@@ -32,11 +34,18 @@ $api->version('v1', [
         //图片验证码
         $api->post('captachas','CaptachasController@store')
             ->name('api.captachas.store');
-
-        //第三方登录
-        $api->post('socials/{social_type}/authorizations','AuthorizationsController@socialStore')
-            ->name('api.socials.authorizations.store');
     });
-
+    // 第三方登录
+    $api->post('socials/{social_type}/authorizations', 'AuthorizationsController@socialStore')
+        ->name('api.socials.authorizations.store');
+    // 登录
+    $api->post('authorizations', 'AuthorizationsController@store')
+        ->name('api.authorizations.store');
+    // 刷新token
+    $api->put('authorizations/current', 'AuthorizationsController@update')
+        ->name('api.authorizations.update');
+    // 删除token
+    $api->delete('authorizations/current', 'AuthorizationsController@destroy')
+        ->name('api.authorizations.destroy');
 });
 
