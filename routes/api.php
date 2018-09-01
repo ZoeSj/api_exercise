@@ -63,6 +63,10 @@ $api->version('v1', [
             // 通知统计
             $api->get('user/notifications/stats', 'NotificationsController@stats')
                 ->name('api.user.notifications.stats');
+            // 标记消息通知为已读
+            $api->patch('user/read/notifications', 'NotificationsController@read')
+                ->name('api.user.notifications.read');
+
 
             // 某个用户发布的话题
             $api->get('users/{user}/topics', 'TopicsController@userIndex')
