@@ -57,6 +57,11 @@ $api->version('v1', [
             // 删除回复
             $api->delete('topics/{topic}/replies/{reply}', 'RepliesController@destroy')
                 ->name('api.topics.replies.destroy');
+            // 通知列表
+            $api->get('user/notifications', 'NotificationsController@index')
+                ->name('api.user.notifications.index');
+
+
             // 某个用户发布的话题
             $api->get('users/{user}/topics', 'TopicsController@userIndex')
                 ->name('api.users.topics.index');
