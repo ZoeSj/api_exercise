@@ -9,6 +9,12 @@ use App\Transformers\ReplyTransformer;
 
 class RepliesController extends Controller
 {
+    /**
+     * @param ReplyRequest $request
+     * @param Topic $topic
+     * @param Reply $reply
+     * @return \Dingo\Api\Http\Response
+     */
     public function store(ReplyRequest $request, Topic $topic, Reply $reply)
     {
         $reply->content = $request->content;
@@ -18,5 +24,17 @@ class RepliesController extends Controller
 
         return $this->response->item($reply, new ReplyTransformer())
             ->setStatusCode(201);
+    }
+
+    public function destroy(Topic $topic, Reply $reply)
+    {
+        if ($reply->topic_id != $topic->id) {
+            return $this->response->errorBadRequest();
+        }
+
+        $this->authorize('destroy', $reply);
+        $reply->delete();
+
+        return $this->response->noContent();
     }
 }
