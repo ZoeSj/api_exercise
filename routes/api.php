@@ -60,7 +60,9 @@ $api->version('v1', [
             // 通知列表
             $api->get('user/notifications', 'NotificationsController@index')
                 ->name('api.user.notifications.index');
-
+            // 通知统计
+            $api->get('user/notifications/stats', 'NotificationsController@stats')
+                ->name('api.user.notifications.stats');
 
             // 某个用户发布的话题
             $api->get('users/{user}/topics', 'TopicsController@userIndex')
