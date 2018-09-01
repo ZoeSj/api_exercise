@@ -23,9 +23,15 @@ $api->version('v1', [
         // 游客可以访问的接口
         $api->get('categories', 'CategoriesController@index')
             ->name('api.categories.index');
+        $api->get('topics', 'TopicsController@index')
+            ->name('api.topics.index');
+        $api->get('users/{user}/topics', 'TopicsController@userIndex')
+            ->name('api.users.topics.index');
+
         //用户注册
         $api->post('users', 'UsersController@store')
             ->name('api.users.store');
+
         // 需要 token 验证的接口
         $api->group(['middleware' => 'api.auth'], function($api) {
             // 编辑登录用户信息

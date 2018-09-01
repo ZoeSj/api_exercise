@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "379e214fb48dce13ed6c55047346f054",
+    "content-hash": "a56c44610ebfc37ed42a806488893f14",
     "packages": [
         {
             "name": "cakephp/chronos",
@@ -5421,6 +5421,49 @@
             "notification-url": "https://repo.packagist.org/downloads/",
             "description": "larvel doc and test html",
             "time": "2018-02-28T03:25:58+00:00"
+        },
+        {
+            "name": "overtrue/laravel-query-logger",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/overtrue/laravel-query-logger.git",
+                "reference": "3d9f54faa5ac5fd757098a93e386dc7e6ae9358a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github-api-proxy.cnpkg.org/repos/overtrue/laravel-query-logger/zipball/3d9f54faa5ac5fd757098a93e386dc7e6ae9358a",
+                "reference": "3d9f54faa5ac5fd757098a93e386dc7e6ae9358a",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Overtrue\\LaravelQueryLogger\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Overtrue\\LaravelQueryLogger\\": "src"
+                }
+            },
+            "notification-url": "https://repo.packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "overtrue",
+                    "email": "anzhengchao@gmail.com"
+                }
+            ],
+            "description": "A dev tool to log all queries for laravel application.",
+            "time": "2018-06-20T06:47:48+00:00"
         },
         {
             "name": "overtrue/laravel-wechat",
