@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2018-09-02 14:11:41.
+    * Generated on 2018-09-02 14:35:22.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -104,6 +104,7 @@ namespace PHPSTORM_META {
         'command.ide-helper.eloquent' => \Barryvdh\LaravelIdeHelper\Console\EloquentCommand::class,
         'doc.generate' => \Apidoc\Commands\Generate::class,
         'doc.clean' => \Apidoc\Commands\Clean::class,
+        'JPush\Client' => \JPush\Client::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'translation.loader' => \Overtrue\LaravelLang\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
@@ -300,6 +301,7 @@ namespace PHPSTORM_META {
         'command.ide-helper.eloquent' => \Barryvdh\LaravelIdeHelper\Console\EloquentCommand::class,
         'doc.generate' => \Apidoc\Commands\Generate::class,
         'doc.clean' => \Apidoc\Commands\Clean::class,
+        'JPush\Client' => \JPush\Client::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'translation.loader' => \Overtrue\LaravelLang\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
@@ -496,6 +498,7 @@ namespace PHPSTORM_META {
         'command.ide-helper.eloquent' => \Barryvdh\LaravelIdeHelper\Console\EloquentCommand::class,
         'doc.generate' => \Apidoc\Commands\Generate::class,
         'doc.clean' => \Apidoc\Commands\Clean::class,
+        'JPush\Client' => \JPush\Client::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'translation.loader' => \Overtrue\LaravelLang\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
@@ -692,6 +695,7 @@ namespace PHPSTORM_META {
         'command.ide-helper.eloquent' => \Barryvdh\LaravelIdeHelper\Console\EloquentCommand::class,
         'doc.generate' => \Apidoc\Commands\Generate::class,
         'doc.clean' => \Apidoc\Commands\Clean::class,
+        'JPush\Client' => \JPush\Client::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'translation.loader' => \Overtrue\LaravelLang\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
@@ -888,6 +892,7 @@ namespace PHPSTORM_META {
         'command.ide-helper.eloquent' => \Barryvdh\LaravelIdeHelper\Console\EloquentCommand::class,
         'doc.generate' => \Apidoc\Commands\Generate::class,
         'doc.clean' => \Apidoc\Commands\Clean::class,
+        'JPush\Client' => \JPush\Client::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'translation.loader' => \Overtrue\LaravelLang\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
@@ -1084,6 +1089,7 @@ namespace PHPSTORM_META {
         'command.ide-helper.eloquent' => \Barryvdh\LaravelIdeHelper\Console\EloquentCommand::class,
         'doc.generate' => \Apidoc\Commands\Generate::class,
         'doc.clean' => \Apidoc\Commands\Clean::class,
+        'JPush\Client' => \JPush\Client::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'translation.loader' => \Overtrue\LaravelLang\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
@@ -1280,6 +1286,7 @@ namespace PHPSTORM_META {
         'command.ide-helper.eloquent' => \Barryvdh\LaravelIdeHelper\Console\EloquentCommand::class,
         'doc.generate' => \Apidoc\Commands\Generate::class,
         'doc.clean' => \Apidoc\Commands\Clean::class,
+        'JPush\Client' => \JPush\Client::class,
         'validation.presence' => \Illuminate\Validation\DatabasePresenceVerifier::class,
         'translation.loader' => \Overtrue\LaravelLang\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
