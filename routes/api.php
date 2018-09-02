@@ -69,6 +69,9 @@ $api->version('v1', [
             // 当前登录用户权限
             $api->get('user/permissions', 'PermissionsController@index')
                 ->name('api.user.permissions.index');
+            // 资源推荐
+            $api->get('links', 'LinksController@index')
+                ->name('api.links.index');
 
 
             // 某个用户发布的话题
